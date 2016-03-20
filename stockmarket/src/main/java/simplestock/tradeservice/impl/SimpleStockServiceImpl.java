@@ -39,11 +39,11 @@ public class SimpleStockServiceImpl implements SimpleStockService {
         BigDecimal dividendYield = null;
         if (Type.Common.equals(stock.getType().getValue())) {
             dividendYield = BigDecimal.valueOf(stock.getLastDividend().getValue())
-                    .divide(BigDecimal.valueOf(prize.getValue()), ROUND_HALF_UP).setScale(10, ROUND_HALF_UP);
+                    .divide(BigDecimal.valueOf(prize.getValue()), 10, ROUND_HALF_UP);
         } else if (Type.Preferred.equals(stock.getType().getValue())) {
             dividendYield = BigDecimal.valueOf(((PreferredStock) stock).getFixedDividend().getValue())
                     .multiply(BigDecimal.valueOf(stock.getParValue().getValue()))
-                    .divide(BigDecimal.valueOf(prize.getValue()), ROUND_HALF_UP).setScale(10, ROUND_HALF_UP);
+                    .divide(BigDecimal.valueOf(prize.getValue()), 10, ROUND_HALF_UP);
         }
 
         if (dividendYield == null) {
@@ -55,7 +55,7 @@ public class SimpleStockServiceImpl implements SimpleStockService {
 
     @Override
     public BigDecimal calcPERatio(Stock stock, Prize prize) {
-        return BigDecimal.valueOf(prize.getValue()).divide(calcDividendYield(stock, prize), ROUND_HALF_UP).setScale(10, ROUND_HALF_UP).stripTrailingZeros();
+        return BigDecimal.valueOf(prize.getValue()).divide(calcDividendYield(stock, prize), 10, ROUND_HALF_UP).stripTrailingZeros();
     }
 
     @Override
