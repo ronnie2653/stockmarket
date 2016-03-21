@@ -32,7 +32,6 @@ public class PreferredStock extends Stock {
     /**
      * <pre>
      * Builder Pattern implementation to create Preferred stock.
-     * Exception thrown here not from constructor of PreferredStock to avoid the possibility of Finalizer Attack.
      * </pre>
      */
     public static class PreferredStockBuilder {

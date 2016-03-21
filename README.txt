@@ -13,8 +13,6 @@ Main ideas behind implementing the task:
   Code Wise: 
 	- Simplicity: Simplest possible solution. No over engineering.
 
-	- Security: Pay attetion to avoid security holes e.g. throwing exceptions from constructors. Usage Builder or Static Factory Method and handling parameter checking in these methods.
-
 	- Thread Safety: Syncronization of shared resources. Usage of immutable objects.
 
 	- Type Safety: Wrap simple values inside classes instead of just using e.g. a String value. Else we can easily give a String or Integer value to the the wrong propertie.

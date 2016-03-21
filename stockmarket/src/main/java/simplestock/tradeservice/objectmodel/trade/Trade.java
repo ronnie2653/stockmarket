@@ -58,7 +58,6 @@ public class Trade {
 
     /**
      * Using the Builder Pattern to create Trades.
-     * Exception thrown here not from constructor to avoid the possibility of Finalizer Attack.
      */
     public static class TradeBuilder {
         private Stock stock;
