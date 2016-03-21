@@ -3,20 +3,26 @@ High level Documentation for the Global Beverage Corporation Exchange project.
 Steps of implemetation:
 
 1. Defined the object model of the project: These are all defined as immutable objects
-	- Stock Properties:
-	- Stock: 	
-	- Trade Properties: 
-	- Trade:
+	- Stock Properties
+	- Stock 	
+	- Trade Properties 
+	- Trade
  
-2. Defined the shared resource: Syncronized stock and trade collections
+2. Defined the shared resource as syncronized stock and trade collections and data service to access it:
+    - SimpleStockDataStorage, SimpleStockDao, SimpleStockDaoImpl 
 
-3. Implementation of the required functionality: TDD, first defined the test and than do the implementation.    
+3. Implementation of the required functionality: TDD, first defined the test and than do the implementation.
+    - test: SimpleStockServiceImplTest, SimpleStockServiceImplTradesTest
+    - api, impl: SimpleStockService, SimpleStockServiceImpl   
 
-Package hierarchy:
+Package description:
   main/java/simplestock/
-	- dataservice : no DB interaction, but the inMemeory trade collections is defined and access here
+	- dataservice : no DB interaction, but the inMemeory trade collections is defined and accessed here
+	    - SimpleStockDaoImpl
 	- tradeservice : that service that can be called to compute the required values. It has an API and an Implementation part. 
 	- utils : common utility methods
 
-  main/test/ 
+  main/test/ : using JUnit and Mockito for unit testing the required functionality.
+    - SimpleStockServiceImplTest
+    - SimpleStockServiceImplTradesTest 
 	

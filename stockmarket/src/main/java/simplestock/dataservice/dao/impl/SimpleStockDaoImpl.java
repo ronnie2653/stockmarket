@@ -10,6 +10,8 @@ import java.util.Date;
 import java.util.List;
 
 /**
+ * Implementation of SimpleStockDao API using the SimpleStockDataStorage synchronized methods.
+ *
  * Created by Sandor Nagy on 3/13/16.
  */
 public class SimpleStockDaoImpl implements SimpleStockDao {

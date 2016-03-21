@@ -30,8 +30,10 @@ public class PreferredStock extends Stock {
     }
 
     /**
-     * Using the Builder Pattern to create Preferred stock.
+     * <pre>
+     * Builder Pattern implementation to create Preferred stock.
      * Exception thrown here not from constructor of PreferredStock to avoid the possibility of Finalizer Attack.
+     * </pre>
      */
     public static class PreferredStockBuilder {
         private Symbol symbol;

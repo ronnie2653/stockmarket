@@ -24,6 +24,7 @@ public class CommonStock extends Stock {
     }
 
     /**
+     * Builder Pattern implementation to create Common stock.
      * Exception thrown here not from constructor to avoid the possibility of Finalizer Attack.
      */
     public static class CommonStockBuilder {
